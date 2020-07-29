@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        tools:context=".Movie.DetailActivity">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_favorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:foregroundGravity="bottom"
+            app:fabSize="normal"
+            app:layout_anchorGravity="bottom|end"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.976"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_date"
+            app:srcCompat="@drawable/ic_favorite_false"
+            tools:ignore="VectorDrawableCompat" />
+
+        <ImageView
+            android:id="@+id/imagesampul"
+            android:layout_width="426dp"
+            android:layout_height="283dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="@string/image_poster"
+            android:foreground="#C0ffffff"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.347"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/poster_aquaman" />
+
+        <ImageView
+            android:id="@+id/image_poster_detail"
+            android:layout_width="101dp"
+            android:layout_height="163dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="212dp"
+            android:layout_marginEnd="12dp"
+            android:contentDescription="@string/image_poster"
+            android:foreground="@drawable/border_description"
+            android:padding="3dp"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="@+id/imagesampul"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imagesampul"
+            tools:src="@drawable/poster_aquaman" />
+
+        <TextView
+            android:id="@+id/movie_name_detail"
+            android:layout_width="278dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:padding="8dp"
+            android:text="@string/judul_filem"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/tv_desc"
+            app:layout_constraintEnd_toEndOf="@+id/movie_desc_detail"
+            app:layout_constraintStart_toEndOf="@+id/tv_desc"
+            app:layout_constraintTop_toBottomOf="@+id/imagesampul"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="82dp"
+            android:layout_height="17dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="312dp"
+            android:layout_marginBottom="8dp"
+            android:numStars="5"
+            android:rating="7.6"
+            app:layout_constraintBottom_toTopOf="@+id/tvrating"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tv_desc"
+            app:layout_constraintTop_toBottomOf="@+id/image_poster_detail"
+            app:layout_constraintVertical_bias="0.0"
+            tools:rating="3" />
+
+        <TextView
+            android:id="@+id/tvrating"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="416dp"
+            android:layout_marginEnd="8dp"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.047"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:padding="8dp"
+            android:text="@string/description"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.027"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvrating" />
+
+        <TextView
+            android:id="@+id/movie_desc_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/md_keylines_16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="@dimen/md_keylines_16dp"
+            android:layout_marginBottom="@dimen/md_keylines_16dp"
+            android:padding="8dp"
+            android:text="@string/description"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/text_Release"
+            app:layout_constraintEnd_toEndOf="@+id/image_poster_detail"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tv_desc"
+            app:layout_constraintTop_toBottomOf="@+id/tv_desc" />
+
+        <TextView
+            android:id="@+id/text_Release"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:padding="8dp"
+            android:text="@string/release_date"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/movie_desc_detail"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/movie_desc_detail"
+            app:layout_constraintTop_toBottomOf="@+id/movie_desc_detail" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:padding="8dp"
+            android:text="@string/director"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/text_Release"
+            app:layout_constraintTop_toBottomOf="@+id/text_Release"
+            app:layout_constraintVertical_bias="0.065"
+            tools:text="Jhon F kenedy" />
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

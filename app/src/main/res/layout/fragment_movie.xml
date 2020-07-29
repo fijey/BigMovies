@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginStart="@dimen/md_keylines"
+    android:layout_marginTop="@dimen/md_keylines"
+    android:layout_marginBottom="@dimen/md_keylines"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/md_keylines"
+    android:layout_marginTop="@dimen/md_keylines"
+    android:layout_marginRight="@dimen/md_keylines"
+    android:layout_marginBottom="@dimen/md_keylines"
+    android:elevation="20dp"
+    android:foreground="?attr/selectableItemBackground"
+    android:scrollbarThumbVertical="@color/colorAccent"
+    app:cardCornerRadius="14dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:layout_width="360dp"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/linear_image"
+                android:layout_width="120dp"
+                android:layout_height="180dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="@dimen/md_keylines"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/movie_image_poster"
+                    android:layout_width="104dp"
+                    android:layout_height="140dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="9dp"
+                    android:contentDescription="@string/image_poster"
+                    android:foreground="@drawable/border_description"
+                    android:padding="3dp"
+                    android:scaleType="fitXY"
+                    tools:src="@drawable/poster_aquaman" />
+
+                <RatingBar
+                    android:id="@+id/ratingBar"
+                    style="@style/MyRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="9dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginEnd="9dp"
+                    android:layout_marginBottom="5dp"
+                    android:numStars="5"
+                    tools:rating="4" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/md_keylines"
+                android:layout_marginTop="@dimen/md_keylines"
+                android:layout_marginBottom="@dimen/md_keylines"
+                android:layout_toEndOf="@id/linear_image"
+                android:layout_toRightOf="@id/linear_image">
+
+                <TextView
+                    android:id="@+id/movie_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/md_keylines"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="@dimen/md_keylines"
+                    android:layout_marginBottom="11dp"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:text="Judul Filem" />
+
+                <TextView
+                    android:id="@+id/movie_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/movie_title"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="@dimen/md_keylines"
+                    android:layout_marginTop="@dimen/md_keylines"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="@dimen/md_keylines"
+                    android:layout_marginBottom="@dimen/md_keylines"
+                    android:gravity="center_vertical"
+                    android:lines="3"
+                    android:padding="5dp"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp"
+                    tools:text="Filem Deskripsi" />
+
+                <TextView
+                    android:id="@+id/tv_release"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/movie_description"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="@dimen/md_keylines_16dp"
+                    android:layout_marginEnd="@dimen/md_keylines"
+                    android:padding="5dp"
+                    android:text="@string/director"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    tools:text="TANGGAL" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
+</RelativeLayout>
+
+
+

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingStart="@dimen/md_keylines"
+    android:paddingEnd="@dimen/md_keylines"
+    android:paddingRight="8dp"
+    android:paddingBottom="8dp">
+
+    <ImageView
+        android:id="@+id/no_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/emptylist"
+        android:visibility="gone"
+        android:gravity="center"
+        android:layout_centerVertical="true" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swloading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+            <android.support.v7.widget.RecyclerView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/list_favorit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:paddingTop="@dimen/md_keylines"
+                android:paddingBottom="@dimen/md_keylines"
+                android:scrollbars="vertical"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            </android.support.v7.widget.RecyclerView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</RelativeLayout>
